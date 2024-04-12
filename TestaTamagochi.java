@@ -3,8 +3,13 @@ import java.util.Scanner;
 // Classe principal do programa
 public class TestaTamagochi {
     public static void main(String[] args) {
-        Tamagotchi tamagotchi = new Tamagotchi("Sebastião"); //Cria uma instância da classe Tamagotchi
-        Scanner scanner = new Scanner(System.in);
+         
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Digite o nome do Tamagotchi:"); // Pede para o usuário digitar o nome do Tamagotchi
+        String nomeTamagotchi = sc.nextLine();
+
+        Tamagotchi tamagotchi = new Tamagotchi(nomeTamagotchi); //Cria um objeto da classe Tamagotchi
 
         // Cria um loop infinito para interagir com o Tamagochi
         while (true) {
@@ -16,7 +21,7 @@ public class TestaTamagochi {
             System.out.println("5. Verificar status");
             System.out.println("6. Sair");
 
-            int escolha = scanner.nextInt();
+            int escolha = sc.nextInt();
 
             switch (escolha) {
                 case 1: //Caso escolha 1 alimenta
@@ -40,7 +45,7 @@ public class TestaTamagochi {
                     break;
                 case 6: //Caso escolha 6 encerra o programa
                     System.out.println("Saindo...");
-                    scanner.close();
+                    sc.close();
                     System.exit(0);
                 default:
                     System.out.println("Escolha inválida!");
