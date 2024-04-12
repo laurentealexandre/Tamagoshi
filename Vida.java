@@ -1,5 +1,5 @@
 // Definição da vida do do Tamagotchi
-enum Stage {
+enum Estagios {
     BEBÊ,
     ADOLESCENTE,
     ADULTO

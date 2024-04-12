@@ -8,7 +8,7 @@ class Tamagotchi {
     private int fome;
     private int felicidade;
     private boolean doente;
-    private Stage stage;
+    private Estagios estagio;
 
     // Construtor
     public Tamagotchi(String nome) {
@@ -18,7 +18,7 @@ class Tamagotchi {
         this.fome = 50;
         this.felicidade = 50;
         this.doente = false;
-        this.stage = Stage.BEBÊ;
+        this.estagio = Estagios.BEBÊ;
     }
 
     // Método para alimentar o Tamagotchi
@@ -62,7 +62,7 @@ class Tamagotchi {
         System.out.println("Energia: " + energia);
         System.out.println("Fome: " + fome);
         System.out.println("Felicidade: " + felicidade);
-        System.out.println("Estágio: " + stage);
+        System.out.println("Estágio: " + estagio);
         System.out.println("Doente: " + (doente ? "Sim" : "Não"));
     }
 
@@ -72,11 +72,11 @@ class Tamagotchi {
             idade++; // Aumenta a idade do Tamagotchi a cada interação com ele
         }        
         if (idade <= 3) // Se a idade for menor ou igual a 3 ele é bebê
-            stage = Stage.BEBÊ;
-        else if (idade <= 5) // Se a idade for menor ou igual a 5 ele é adolescente
-            stage = Stage.ADOLESCENTE;
+            estagio = Estagios.BEBÊ; //estagio recebe BEBÊ
+        else if (idade <= 6) // Se a idade for menor ou igual a 6 ele é adolescente
+            estagio = Estagios.ADOLESCENTE; //estagio recebe ADOLESCENTE
         else  // Se a idade for maior que 5 ele é adulto
-            stage = Stage.ADULTO;
+            estagio = Estagios.ADULTO; //estagio recebe ADULTO
 
         // Método aleatorio para definir se está doente
         Random random = new Random();
