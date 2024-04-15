@@ -68,6 +68,20 @@ class Tamagotchi {
 
     // Método para simular o ciclo de vida do Tamagotchi
     public void cicloDeVida(int escolha) {
+
+        // Verifica se a energia chegou a 0
+        if (energia == 0) { // Se a energia for igual a 0 ele morre
+        System.out.println(nome + " morreu por falta de energia.");
+        System.out.println("Saindo... Fim de jogo"); 
+        System.exit(0);
+    }
+
+        // Verifica se a fome chegou a 100
+        if (fome == 100) { // Se a fome for igual a 100 ele morre
+        System.out.println(nome + " morreu de fome.");
+        System.out.println("Saindo... Fim de jogo"); 
+        System.exit(0); 
+    }
         if (escolha != 5) { // If para que se a opção for 5(exibir Status) não aumente a idade
             idade++; // Aumenta a idade do Tamagotchi a cada interação com ele
         }        

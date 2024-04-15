@@ -6,7 +6,7 @@ public class TestaTamagochi {
          
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("Digite o nome do Tamagotchi:"); // Pede para o usuário digitar o nome do Tamagotchi
+        System.out.println("\nDigite o nome do Tamagotchi:"); // Pede para o usuário digitar o nome do Tamagotchi
         String nomeTamagotchi = sc.nextLine();
 
         Tamagotchi tamagotchi = new Tamagotchi(nomeTamagotchi); //Cria um objeto da classe Tamagotchi
@@ -44,7 +44,7 @@ public class TestaTamagochi {
                     tamagotchi.verificarStatus();
                     break;
                 case 6: //Caso escolha 6 encerra o programa
-                    System.out.println("Saindo...");
+                    System.out.println("Saindo... Fim de jogo");
                     sc.close();
                     System.exit(0);
                 default:
